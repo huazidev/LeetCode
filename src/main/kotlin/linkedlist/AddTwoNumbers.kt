@@ -1,3 +1,5 @@
+package linkedlist
+
 /**
  * You are given two non-empty linked lists representing two non-negative integers.
  * The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
@@ -47,24 +49,6 @@ class AddTwoNumbers {
         return resultListNode.next
     }
 
-}
-
-class ListNode(var value: Int = -1, var next: ListNode? = null) {
-    override fun toString(): String {
-        return "$value -> ${next?.toString()}"
-    }
-
-    companion object {
-        fun quickListNode(intArray: List<Int>): ListNode {
-            val listNode = ListNode()
-            intArray.reversed().forEach {
-                val tempNode = ListNode(it)
-                tempNode.next = listNode.next
-                listNode.next = tempNode
-            }
-            return listNode.next!!
-        }
-    }
 }
 
 fun main() {
