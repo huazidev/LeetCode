@@ -18,12 +18,13 @@ package linkedlist
  *
  * Could you do this in one pass?
  *
- * result: test pass
+ * result: test passed
  *
  * @author hua on 2020/06/18.
  */
 class RemoveNthFromEnd {
 
+    // Time Complexity: O(n), Space complexity: O(1)
     fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
         val preNode = ListNode()
         preNode.next = head
